@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MyName" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R8R-3R-fWI">
+                                <rect key="frame" x="166.66666666666666" y="430" width="81" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Press Me"/>
+                                <connections>
+                                    <action selector="pressMeAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uVl-7E-prt"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Press the above button" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="npf-Wm-V6N">
+                                <rect key="frame" x="119" y="487.66666666666669" width="176" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="FirstName" translatesAutoresizingMaskIntoConstraints="NO" id="pb4-nr-nv2">
+                                <rect key="frame" x="91" y="64" width="232" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="Am3-y5-lLM"/>
+                                    <constraint firstAttribute="width" constant="100" id="ZH2-5n-DQ2"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="rxY-VB-0lr"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="300" id="ufN-wC-aMh"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="200" id="vTk-hi-68o"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="300" id="wfg-hs-PQM"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="pb4-nr-nv2" secondAttribute="trailing" constant="91" id="48F-eh-P3L"/>
+                            <constraint firstItem="R8R-3R-fWI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7iF-Y6-eWh"/>
+                            <constraint firstItem="R8R-3R-fWI" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Gtp-3R-BDr"/>
+                            <constraint firstItem="npf-Wm-V6N" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="HNH-hj-1dB"/>
+                            <constraint firstItem="pb4-nr-nv2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="91" id="WIv-1r-vwq"/>
+                            <constraint firstItem="pb4-nr-nv2" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="gXA-bO-p4i"/>
+                            <constraint firstItem="npf-Wm-V6N" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="50" id="sWn-g5-TEB"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imgView" destination="pb4-nr-nv2" id="vRn-YI-iuY"/>
+                        <outlet property="lblPressMe" destination="npf-Wm-V6N" id="KBc-GK-BZN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="61.607142857142854"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="FirstName" width="33.333332061767578" height="33.333332061767578"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
