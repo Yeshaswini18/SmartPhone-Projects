@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <device id="retina3_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,14 +13,14 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DiceGame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nmU-IA-787" userLabel="HeaderView">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="header" translatesAutoresizingMaskIntoConstraints="NO" id="Fpf-ti-NfI">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
                                         <color key="backgroundColor" systemColor="systemPinkColor"/>
                                         <color key="tintColor" systemColor="systemRedColor"/>
                                     </imageView>
@@ -36,16 +36,16 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pb3-dq-eBv" userLabel="BodyView">
-                                <rect key="frame" x="0.0" y="80" width="414" height="456"/>
+                                <rect key="frame" x="0.0" y="80" width="320" height="200"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="45" translatesAutoresizingMaskIntoConstraints="NO" id="tJT-pi-LsD">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="456"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="200"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Four" translatesAutoresizingMaskIntoConstraints="NO" id="Ux0-aY-Imd">
-                                                <rect key="frame" x="0.0" y="0.0" width="184.66666666666666" height="456"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="137.5" height="200"/>
                                             </imageView>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Dice6" translatesAutoresizingMaskIntoConstraints="NO" id="ZQG-ej-SeT">
-                                                <rect key="frame" x="229.66666666666663" y="0.0" width="184.33333333333337" height="456"/>
+                                                <rect key="frame" x="182.5" y="0.0" width="137.5" height="200"/>
                                             </imageView>
                                         </subviews>
                                     </stackView>
@@ -59,25 +59,25 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x41-kf-DhG" userLabel="FooterView">
-                                <rect key="frame" x="0.0" y="536" width="414" height="200"/>
+                                <rect key="frame" x="0.0" y="280" width="320" height="200"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="JxZ-x6-SRH">
-                                        <rect key="frame" x="0.0" y="35" width="414" height="115"/>
+                                        <rect key="frame" x="0.0" y="35" width="320" height="115"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You Won 10$" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="seN-uP-52x">
-                                                <rect key="frame" x="149.66666666666666" y="0.0" width="114.99999999999997" height="24"/>
+                                                <rect key="frame" x="102.5" y="0.0" width="115" height="24"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Balance = $20" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lOL-fo-Rlm">
-                                                <rect key="frame" x="121.33333333333333" y="38" width="171.33333333333337" height="24"/>
+                                                <rect key="frame" x="74.5" y="38" width="171.5" height="24"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UIj-5r-4LA">
-                                                <rect key="frame" x="165.66666666666666" y="76" width="83" height="39"/>
+                                                <rect key="frame" x="118.5" y="76" width="83" height="39"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                                 <state key="normal" title="Roll Dice"/>
                                                 <connections>
@@ -130,7 +130,7 @@
     <resources>
         <image name="Dice6" width="99" height="98"/>
         <image name="Four" width="50" height="50"/>
-        <image name="header" width="166.66667175292969" height="33.333332061767578"/>
+        <image name="header" width="166.5" height="33"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
