@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "55A7B896-040F-44B3-999A-AD2B6918BCC8"
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5E620855-9041-4E71-8373-7623AC8C1E8A"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NetworkCallAndPromises/ComodityTableViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
+            landmarkName = "getData()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "89C256B1-026B-42E1-B674-43DCE6210262"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NetworkCallAndPromises/ComodityTableViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "61"
+            endingLineNumber = "61"
+            landmarkName = "getQuickShortQuote(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "89C256B1-026B-42E1-B674-43DCE6210262 - 7cdec07979b720c8"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (PromiseKit.Resolver&lt;Swift.Array&lt;NetworkCallAndPromises.Comodity&gt;&gt;) -&gt; () in NetworkCallAndPromises.ComodityTableViewController.getQuickShortQuote(Swift.String) -&gt; PromiseKit.Promise&lt;Swift.Array&lt;NetworkCallAndPromises.Comodity&gt;&gt;"
+                  moduleName = "NetworkCallAndPromises"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sankeerthvs/NEU/sem4/SmartPhone/NetworkCallAndPromises/NetworkCallAndPromises/ComodityTableViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "63"
+                  endingLineNumber = "63"
+                  offsetFromSymbolStart = "61">
+               </Location>
+               <Location
+                  uuid = "89C256B1-026B-42E1-B674-43DCE6210262 - 2fa6236b9ecc904f"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Alamofire.DataResponse&lt;Any, Alamofire.AFError&gt;) -&gt; () in closure #1 (PromiseKit.Resolver&lt;Swift.Array&lt;NetworkCallAndPromises.Comodity&gt;&gt;) -&gt; () in NetworkCallAndPromises.ComodityTableViewController.getQuickShortQuote(Swift.String) -&gt; PromiseKit.Promise&lt;Swift.Array&lt;NetworkCallAndPromises.Comodity&gt;&gt;"
+                  moduleName = "NetworkCallAndPromises"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sankeerthvs/NEU/sem4/SmartPhone/NetworkCallAndPromises/NetworkCallAndPromises/ComodityTableViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "64"
+                  endingLineNumber = "64"
+                  offsetFromSymbolStart = "273">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "73F89122-E21B-4A53-AD5E-E16733974CFD"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NetworkCallAndPromises/ComodityTableViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "64"
+            endingLineNumber = "64"
+            landmarkName = "getQuickShortQuote(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "DB4C051D-A091-438E-8412-FE371F5FBA74"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NetworkCallAndPromises/ComodityTableViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "60"
+            endingLineNumber = "60"
+            landmarkName = "getQuickShortQuote(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "DB4C051D-A091-438E-8412-FE371F5FBA74 - e208bfabafabc49a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NetworkCallAndPromises.ComodityTableViewController.getQuickShortQuote(Swift.String) -&gt; PromiseKit.Promise&lt;Swift.Array&lt;NetworkCallAndPromises.Comodity&gt;&gt;"
+                  moduleName = "NetworkCallAndPromises"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sankeerthvs/NEU/sem4/SmartPhone/NetworkCallAndPromises/NetworkCallAndPromises/ComodityTableViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "62"
+                  endingLineNumber = "62"
+                  offsetFromSymbolStart = "37">
+               </Location>
+               <Location
+                  uuid = "DB4C051D-A091-438E-8412-FE371F5FBA74 - 7cdec07979b720c8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (PromiseKit.Resolver&lt;Swift.Array&lt;NetworkCallAndPromises.Comodity&gt;&gt;) -&gt; () in NetworkCallAndPromises.ComodityTableViewController.getQuickShortQuote(Swift.String) -&gt; PromiseKit.Promise&lt;Swift.Array&lt;NetworkCallAndPromises.Comodity&gt;&gt;"
+                  moduleName = "NetworkCallAndPromises"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sankeerthvs/NEU/sem4/SmartPhone/NetworkCallAndPromises/NetworkCallAndPromises/ComodityTableViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "63"
+                  endingLineNumber = "63"
+                  offsetFromSymbolStart = "61">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

@@ -46,13 +46,11 @@ class NewsTableViewController: UITableViewController {
             if response.error == nil{
                 guard let data = response.data else{return}
                 guard let news = JSON(data)["articles"].array else {return}
-                
                 if news.count == 0 {
                     return
                 }
                     
             self.newsArr = [News]()
-            
                 for part in news{
                     let title = part["title"].stringValue
                     self.newsArr.append(News(title: title))
