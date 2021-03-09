@@ -31,6 +31,11 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UITableViewDe
         locationManager.requestLocation()
         tblWorldWeather.delegate = self
         tblWorldWeather.dataSource = self
+        self.registerNib()
+    }
+    
+    public func registerNib() {
+        tblWorldWeather.register(UINib(nibName: TableViewCell.nibName, bundle: nil), forCellReuseIdentifier: TableViewCell.nibName)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -39,9 +44,10 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UITableViewDe
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = Bundle.main.loadNibNamed("TableViewCell", owner: self, options: nil)?.first as! TableViewCell
-        cell.lblDay.text = DailyForecastArr[indexPath.row].dayOfWeek
-        cell.lblLow.text = String(DailyForecastArr[indexPath.row].minimumTemp) + "°F"
-        cell.lblHigh.text = String(DailyForecastArr[indexPath.row].maximumTemp) + "°F"
+//        cell.lblDay.text = DailyForecastArr[indexPath.row].dayOfWeek
+//        cell.lblLow.text = String(DailyForecastArr[indexPath.row].minimumTemp) + "°F"
+//        cell.lblHigh.text = String(DailyForecastArr[indexPath.row].maximumTemp) + "°F"
+        cell.setData(forecast: DailyForecastArr[indexPath.row])
         
         return cell
     }
