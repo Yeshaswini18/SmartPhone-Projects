@@ -11,6 +11,7 @@ import SwiftSpinner
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var imgLogo: UIImageView!
     @IBOutlet weak var txtEmail: UITextField!
     @IBOutlet weak var lblStatus: UILabel!
     @IBOutlet weak var txtPassword: UITextField!
@@ -18,6 +19,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         lblStatus.text = ""
+        self.imgLogo.image = UIImage(named: "logo")
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -26,6 +28,7 @@ class ViewController: UIViewController {
             performSegue(withIdentifier: "DashboardSegue", sender: self)
         }
         txtPassword.text = ""
+        self.lblStatus.text = ""
     }
     
     func addKeychainAfterLogin(_ uid: String) {

@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "childwelfare.png",
+      "filename" : "forest.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "childwelfare@2x.png",
+      "filename" : "forest@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "childwelfare@3x.png",
+      "filename" : "forest@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

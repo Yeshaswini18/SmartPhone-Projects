@@ -16,6 +16,7 @@ class DonationViewController: UIViewController {
     var sum: Int = 0
     
 
+    @IBOutlet var scrollView: UIScrollView!
     @IBOutlet weak var lblStatus: UILabel!
     @IBOutlet weak var lblServiceFee: UILabel!
     @IBOutlet weak var txtAmount: UITextField!
@@ -23,14 +24,23 @@ class DonationViewController: UIViewController {
     @IBOutlet weak var lblOrgName: UILabel!
     @IBOutlet weak var imgOrg: UIImageView!
     
+    let boldAttribute = [
+          NSAttributedString.Key.font: UIFont(name: "HelveticaNeue-Bold", size: 18.0)!
+       ]
+    let regularAttribute = [
+          NSAttributedString.Key.font: UIFont(name: "HelveticaNeue-Light", size: 18.0)!
+       ]
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        scrollView.isScrollEnabled = true
         let settings = FirestoreSettings()
         Firestore.firestore().settings = settings
         db = Firestore.firestore()
         getOrganizationDetails()
         self.lblStatus.text = " "
+        
     }
     
     
@@ -48,15 +58,31 @@ class DonationViewController: UIViewController {
                     var urlData = NSData(contentsOf : url as! URL)
                     self.imgOrg.image = UIImage(data : urlData as! Data)
                     let name = data["name"] as? String ?? "None"
-                    self.lblOrgName.text = name
+                    let nameBold = NSAttributedString(string: "Name: ", attributes: self.boldAttribute)
+                    let nameRegular = NSAttributedString(string: name, attributes: self.regularAttribute)
+                    let nameString = NSMutableAttributedString()
+                    nameString.append(nameBold)
+                    nameString.append(nameRegular)
+                    self.lblOrgName.attributedText = nameString
                     CategorySelect.orgName = name
                     let organizationID = data["organizationID"] as? String ?? "None"
                     let address = data["address"] as? String ?? "None"
                     CategorySelect.address = address
+                    
                     let description = data["description"] as? String ?? "None"
-                    self.lblDescription.text = description
+                    let descBold = NSAttributedString(string: "Description: ", attributes: self.boldAttribute)
+                    let desc = NSAttributedString(string: description, attributes: self.regularAttribute)
+                    let descString = NSMutableAttributedString()
+                    descString.append(descBold)
+                    descString.append(desc)
+                    self.lblDescription.attributedText = descString
                     let serviceFee = data["serviceFee"] as? Int ?? 0
-                    self.lblServiceFee.text = "Service Fee: \(serviceFee)"
+                    let feeBold = NSAttributedString(string: "Service Fee: ", attributes: self.boldAttribute)
+                    let feeRegular = NSAttributedString(string: String(serviceFee), attributes: self.regularAttribute)
+                    let feeString = NSMutableAttributedString()
+                    feeString.append(feeBold)
+                    feeString.append(feeRegular)
+                    self.lblServiceFee.attributedText = feeString
                     self.serviceFee = serviceFee
                     
                 }

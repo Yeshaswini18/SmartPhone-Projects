@@ -17,7 +17,14 @@ class ServiceViewController: UIViewController {
     var pickerViewDate = UIDatePicker()
     var pickerViewFrom = UIDatePicker()
     var pickerViewTo = UIPickerView()
+    let boldAttribute = [
+          NSAttributedString.Key.font: UIFont(name: "HelveticaNeue-Bold", size: 18.0)!
+       ]
+    let regularAttribute = [
+          NSAttributedString.Key.font: UIFont(name: "HelveticaNeue-Light", size: 18.0)!
+       ]
     
+    @IBOutlet weak var btnBook: UIButton!
     @IBOutlet weak var lblStatus: UILabel!
     
     @IBOutlet weak var txtEndTime: UITextField!
@@ -56,6 +63,7 @@ class ServiceViewController: UIViewController {
         formatter.timeStyle = .medium
         txtTime.text = "\(formatter.string(from: pickerViewFrom.date))"
         self.view.endEditing(true)
+        self.lblStatus.text = ""
     }
     
     func createToTime() {
@@ -75,6 +83,7 @@ class ServiceViewController: UIViewController {
         formatter.timeStyle = .medium
         txtEndTime.text = "\(formatter.string(from: pickerViewFrom.date))"
         self.view.endEditing(true)
+        self.lblStatus.text = ""
     }
     
     func createDatePicker(){
@@ -96,6 +105,7 @@ class ServiceViewController: UIViewController {
         formatter.timeStyle = .none
         txtDate.text = "\(formatter.string(from: pickerViewDate.date))"
         self.view.endEditing(true)
+        self.lblStatus.text = ""
     }
     
     func getOrganizationDetails(){
@@ -108,10 +118,20 @@ class ServiceViewController: UIViewController {
                 for document in querySnapshot!.documents {
                     let data = document.data()
                     let name = data["name"] as? String ?? "None"
-                    self.lblOrgName.text = "Thanks for helping \(name)"
-                    let address = data["address"] as? String ?? "None"
-                    self.lblAddress.text = "Address: \(address)"
+                    let nameBold = NSAttributedString(string: name, attributes: self.boldAttribute)
+                    let nameRegular = NSAttributedString(string: "Thanks for helping ", attributes: self.regularAttribute)
+                    let nameString = NSMutableAttributedString()
+                    nameString.append(nameRegular)
+                    nameString.append(nameBold)
+                    self.lblOrgName.attributedText = nameString
                     
+                    let address = data["address"] as? String ?? "None"
+                    let addressBold = NSAttributedString(string: "Address: ", attributes: self.boldAttribute)
+                    let addressRegular = NSAttributedString(string: address, attributes: self.regularAttribute)
+                    let addressString = NSMutableAttributedString()
+                    addressString.append(addressBold)
+                    addressString.append(addressRegular)
+                    self.lblAddress.attributedText = addressString
                 }
         }
     }
@@ -130,6 +150,7 @@ class ServiceViewController: UIViewController {
             lblStatus.text = "Please select date and time"
         } else {
             addServiceToDB()
+            self.btnBook.isHidden = true
             self.lblStatus.text = "Booking Confirmed!!"
             self.imgHappy.image = UIImage(named: "Happy")
         }

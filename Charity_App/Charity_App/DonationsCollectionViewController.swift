@@ -14,6 +14,12 @@ private let reuseIdentifier = "Cell"
 class DonationsCollectionViewController: UICollectionViewController {
     var db: Firestore!
     var donationArr: [DonationModel] = [DonationModel]()
+    let boldAttribute = [
+          NSAttributedString.Key.font: UIFont(name: "HelveticaNeue-Bold", size: 18.0)!
+       ]
+    let regularAttribute = [
+          NSAttributedString.Key.font: UIFont(name: "HelveticaNeue-Light", size: 18.0)!
+       ]
 
     @IBOutlet var collView: UICollectionView!
     override func viewDidLoad() {
@@ -32,11 +38,35 @@ class DonationsCollectionViewController: UICollectionViewController {
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! DonationsCollectionViewCell
-        cell.lblOrgName.text = "Org Name : \(donationArr[indexPath.row].orgName)"
-        cell.lblTime.text = "Time : \(donationArr[indexPath.row].time)"
-        cell.lblDate.text = "Date : \(donationArr[indexPath.row].date)"
-        cell.lblAmount.text = "Amount Donated : \(String(donationArr[indexPath.row].amount))"
         
+        let nameBold = NSAttributedString(string: "Name: ", attributes: self.boldAttribute)
+        let nameRegular = NSAttributedString(string: donationArr[indexPath.row].orgName, attributes: self.regularAttribute)
+        let nameString = NSMutableAttributedString()
+        nameString.append(nameBold)
+        nameString.append(nameRegular)
+        cell.lblOrgName.attributedText = nameString
+        
+        let timeBold = NSAttributedString(string: "Time: ", attributes: self.boldAttribute)
+        let timeRegular = NSAttributedString(string: donationArr[indexPath.row].time, attributes: self.regularAttribute)
+        let timeString = NSMutableAttributedString()
+        timeString.append(timeBold)
+        timeString.append(timeRegular)
+        cell.lblTime.attributedText = timeString
+        
+        let dateBold = NSAttributedString(string: "Date: ", attributes: self.boldAttribute)
+        let dateRegular = NSAttributedString(string: donationArr[indexPath.row].date, attributes: self.regularAttribute)
+        let dateString = NSMutableAttributedString()
+        dateString.append(dateBold)
+        dateString.append(dateRegular)
+        cell.lblDate.attributedText = dateString
+        
+        let amountBold = NSAttributedString(string: "Amount Donated :", attributes: self.boldAttribute)
+        let amountRegular = NSAttributedString(string: String(donationArr[indexPath.row].amount), attributes: self.regularAttribute)
+        let amountString = NSMutableAttributedString()
+        amountString.append(amountBold)
+        amountString.append(amountRegular)
+        cell.lblAmount.attributedText = amountString
+    
         return cell
     }
     

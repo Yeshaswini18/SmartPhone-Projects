@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "childwelfare.png",
+      "filename" : "GRACIOUS GIVERS.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "childwelfare@2x.png",
+      "filename" : "GRACIOUS GIVERS@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "childwelfare@3x.png",
+      "filename" : "GRACIOUS GIVERS@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

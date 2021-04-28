@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "wildlife.jpeg",
+      "filename" : "wildlife.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "wildlife@2x.jpeg",
+      "filename" : "wildlife@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "wildlife@3x.jpeg",
+      "filename" : "wildlife@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

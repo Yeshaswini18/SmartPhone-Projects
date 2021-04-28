@@ -14,6 +14,12 @@ private let reuseIdentifier = "Cell"
 class ServicesCollectionViewController: UICollectionViewController {
     var db: Firestore!
     var servicesArr: [ServicesModel] = [ServicesModel]()
+    let boldAttribute = [
+          NSAttributedString.Key.font: UIFont(name: "HelveticaNeue-Bold", size: 18.0)!
+       ]
+    let regularAttribute = [
+          NSAttributedString.Key.font: UIFont(name: "HelveticaNeue-Light", size: 18.0)!
+       ]
     
     @IBOutlet var collView: UICollectionView!
     override func viewDidLoad() {
@@ -32,11 +38,41 @@ class ServicesCollectionViewController: UICollectionViewController {
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! ServicesCollectionViewCell
-        cell.lblDate.text = "Date : \(servicesArr[indexPath.row].date)"
-        cell.lblOrgName.text = "Org Name : \(servicesArr[indexPath.row].orgName)"
-        cell.lblFrom.text = "From : \(servicesArr[indexPath.row].from)"
-        cell.lblTo.text = "To : \(servicesArr[indexPath.row].to)"
-        cell.lblAddress.text = "Address : \(servicesArr[indexPath.row].address)"
+        
+        let dateBold = NSAttributedString(string: "Date: ", attributes: self.boldAttribute)
+        let dateRegular = NSAttributedString(string: servicesArr[indexPath.row].date, attributes: self.regularAttribute)
+        let dateString = NSMutableAttributedString()
+        dateString.append(dateBold)
+        dateString.append(dateRegular)
+        cell.lblDate.attributedText = dateString
+        
+        let nameBold = NSAttributedString(string: "Name: ", attributes: self.boldAttribute)
+        let nameRegular = NSAttributedString(string: servicesArr[indexPath.row].orgName, attributes: self.regularAttribute)
+        let nameString = NSMutableAttributedString()
+        nameString.append(nameBold)
+        nameString.append(nameRegular)
+        cell.lblOrgName.attributedText = nameString
+        
+        let fromBold = NSAttributedString(string: "From: ", attributes: self.boldAttribute)
+        let fromRegular = NSAttributedString(string: servicesArr[indexPath.row].from, attributes: self.regularAttribute)
+        let fromString = NSMutableAttributedString()
+        fromString.append(fromBold)
+        fromString.append(fromRegular)
+        cell.lblFrom.attributedText = fromString
+        
+        let toBold = NSAttributedString(string: "To: ", attributes: self.boldAttribute)
+        let toRegular = NSAttributedString(string: servicesArr[indexPath.row].to, attributes: self.regularAttribute)
+        let toString = NSMutableAttributedString()
+        toString.append(toBold)
+        toString.append(toRegular)
+        cell.lblTo.attributedText = toString
+        
+        let addressBold = NSAttributedString(string: "Address: ", attributes: self.boldAttribute)
+        let addressRegular = NSAttributedString(string: servicesArr[indexPath.row].address, attributes: self.regularAttribute)
+        let addressString = NSMutableAttributedString()
+        addressString.append(addressBold)
+        addressString.append(addressRegular)
+        cell.lblAddress.attributedText = addressString
     
         return cell
     }
